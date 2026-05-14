@@ -1,1 +1,1 @@
-My preferences for starting Python projects
+My preferences for initially configuring Python projects
