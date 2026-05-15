@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "<project-name>"
+version = "0.1.0"
+description = "<project-description>"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.12, <3.13" # Update to match environment.yaml
+dependencies = [
+  # Add project dependencies here, e.g.:
+  # "numpy>=2.0",
+  # "pandas>=3.0",
+  # "requests>=2.32",
+  "ruff>=0.15",
+]
+
+[project.urls]
+Repository = "https://github.com/<org>/<project-name>"
+
+[project.optional-dependencies]
+dev = ["pip-tools"]
+
+[tool.setuptools]
+license-files = ["LICENSE*"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["<project-name>*"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py312" # Update to match requires-python
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.ruff.lint]
+ignore = [
+  "COM819",
+]
+fixable = [
+  "ALL",
+]
+select = [
+  "B",      # flake8-bugbear
+  "COM",    # use trailing commas
+  "COM812",
+  "E",      # pycodestyle errors
+  "F",      # pyflakes
+  "I",      # isort
+  "SIM",    # flake8-simplify
+  "RUF",    # ruff-native rules
+  "UP",     # pyupgrade
+  "W",      # pycodestyle warnings
+]
+
+[tool.ruff.lint.isort]
+force-single-line = true
+split-on-trailing-comma = true

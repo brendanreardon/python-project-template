@@ -1,0 +1,9 @@
+name: <project-name>
+channels:
+  - conda-forge
+dependencies:
+  - python>=3.12,<3.13
+  - pip
+  - pip:
+      - -r requirements-lock.txt
+      - pip-tools
