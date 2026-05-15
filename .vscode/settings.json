@@ -50,4 +50,7 @@
 
   // Terminal
   "terminal.integrated.environmentChangesRelaunch": true,
+
+  // VSCode
+  "workbench.editor.enablePreview": false,
 }
