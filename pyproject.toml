@@ -32,6 +32,7 @@ include = ["<project-name>*"]
 
 [tool.ruff]
 line-length = 88
+preview = true
 target-version = "py312" # Update to match requires-python
 
 [tool.ruff.format]
